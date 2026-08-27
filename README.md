@@ -49,6 +49,13 @@ Dashboard
 
 ![SentinelNIDS Dashboard](dashboard.png)
 
+## API Documentation
+
+Interactive FastAPI Swagger documentation:
+
+![SentinelNIDS API Documentation](api-docs.png)
+
+
 ## Testing
 
 Run the automated test suite:
