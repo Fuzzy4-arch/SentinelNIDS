@@ -1,3 +1,6 @@
+from fastapi.responses import HTMLResponse
+from pathlib import Path
+
 from fastapi import FastAPI, HTTPException
 
 from app.storage.database import init_db, get_alerts
@@ -54,3 +57,6 @@ def stats():
             if alert["rule"] == "PORT_SCAN"
         ),
     }
+@app.get("/dashboard", response_class=HTMLResponse)
+def dashboard():
+    return Path("templates/dashboard.html").read_text(encoding="utf-8")
