@@ -102,3 +102,12 @@ def test_ssh_burst_detection():
     assert alerts[0].severity == "HIGH"
     assert alerts[0].risk_score == 80
     assert alerts[0].risk_level == "HIGH"
+
+def test_database_init_and_read():
+    from app.storage.database import init_db, get_alerts
+
+    init_db()
+
+    alerts = get_alerts()
+
+    assert isinstance(alerts, list)
