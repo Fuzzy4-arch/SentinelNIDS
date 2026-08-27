@@ -37,13 +37,13 @@ Dashboard
 
 ## API Endpoints
 
-| Endpoint       | Purpose              |
-| -------------- | -------------------- |
-| `/`            | API status           |
-| `/alerts`      | List security alerts |
-| `/alerts/{id}` | Get a specific alert |
-| `/stats`       | Security statistics  |
-| `/dashboard`   | Web dashboard        |
+| Endpoint | Purpose |
+|---|---|
+| `/` | API status |
+| `/alerts` | List security alerts |
+| `/alerts/{alert_id}` | Get a specific alert |
+| `/stats` | Security statistics |
+| `/dashboard` | Web dashboard |
 
 ## Dashboard
 
@@ -101,9 +101,9 @@ SentinelNIDS/
 │
 ├── templates/
 │   └── dashboard.html
-│
 ├── main.py
 ├── dashboard.png
+├── api-docs.png
 ├── .gitignore
 └── README.md
 ```
