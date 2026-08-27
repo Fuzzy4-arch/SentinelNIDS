@@ -14,3 +14,16 @@ def simulate_port_scan():
         packets.append(packet)
 
     return packets
+
+
+def simulate_ssh_burst():
+    packets = []
+
+    for i in range(5):
+        packet = (
+            IP(src="10.0.0.20", dst="10.0.0.10")
+            / TCP(sport=51000 + i, dport=22)
+        )
+        packets.append(packet)
+
+    return packets
